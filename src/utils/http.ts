@@ -1,6 +1,6 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
 const http = axios.create({
-	baseURL: 'http://quangnvdev.click:8000',
+	baseURL: 'http://103.79.142.191:8000',
 	headers: {
 		'Content-Type': 'application/json',
 	},
