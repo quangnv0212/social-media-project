@@ -6,6 +6,8 @@ import { useAppSelector } from "../app/hooks";
 import { Post } from "../components/Post";
 import http from "../utils/http";
 import { toast } from "react-toastify";
+import { SyncOutlined } from "@ant-design/icons";
+import { SuggestUser } from "../components/SuggestUser";
 
 export interface IHomeProps {}
 
@@ -43,7 +45,18 @@ export function Home(props: IHomeProps) {
         ))}
       </div>
       <div className="lg:w-72 w-fulls">
-        <h3 className="text-xl font-semibold"> Contacts </h3>
+        <div className="bg-white rounded-xl shadow-sm p-5 px-6 border-1">
+          <div className="flex justify-between text-black dark:text-white">
+            <h3 className="font-bold text-base"> People You might know </h3>
+            <div className="cursor-pointer">
+              <SyncOutlined />
+            </div>
+          </div>
+          <SuggestUser />
+          <SuggestUser />
+          <SuggestUser />
+          <SuggestUser />
+        </div>
       </div>
     </div>
   );
